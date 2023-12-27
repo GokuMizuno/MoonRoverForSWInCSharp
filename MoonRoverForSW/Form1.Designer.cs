@@ -63,7 +63,6 @@
             this.PlateauSize.Name = "PlateauSize";
             this.PlateauSize.Size = new System.Drawing.Size(100, 20);
             this.PlateauSize.TabIndex = 1;
-            this.PlateauSize.Text = "Plateau Size";
             this.PlateauSize.TextChanged += new System.EventHandler(this.PlateauSize_TextChanged);
             // 
             // Rover1StartCoordsBox
