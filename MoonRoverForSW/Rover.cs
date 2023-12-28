@@ -26,6 +26,11 @@ namespace MoonRoverForSW
         /// <param name="D">string, the direction we are pointing, N,E,S,W</param>
         public Rover(int X, int Y, string D) 
         {
+            if ((X < 0) || (Y < 0))
+                throw new ArgumentOutOfRangeException();
+            if (D == null)
+                throw new ArgumentNullException();
+
             Direction dir = new Direction();
             Rx = X;
             Ry = Y;
@@ -68,7 +73,8 @@ namespace MoonRoverForSW
         /// <returns>Direction the rover is pointing: N,E,W,S</returns>
         public Direction SetRotation(string rotation)
         {
-            //if ((rotation != "L") || (rotation != "R")) { throw a fit; }
+            if ((rotation != "L") || (rotation != "R"))
+                throw new ArgumentOutOfRangeException();
 
             Direction rd = RDirection;
             if (rotation == "R")
